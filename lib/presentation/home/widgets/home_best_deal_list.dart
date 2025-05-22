@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../home.dart';
 
-class HomeBestDealList extends StatelessWidget {
+class HomeListItem extends StatelessWidget {
   final List<ProductModel> products;
+  final String title;
 
-  const HomeBestDealList({super.key, required this.products});
+  const HomeListItem({super.key, required this.products, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,22 +14,26 @@ class HomeBestDealList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Best Deals',
+          title,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+                fontWeight: FontWeight.bold,
+              ),
         ),
         SizedBox(height: 10.h),
         SizedBox(
-          height: 300.h,
+          height: 290.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: products.length,
             itemBuilder: (context, index) {
               final item = products[index];
-              return BestDealItemCard(
-                imageUrl: item.image,
+              return ProductItemCard(
+                imageUrl: item.images.first,
                 title: item.title,
+                ratings: item.rating,
+                description: item.description,
+                shortDescription: item.shortDescription,
+                features: item.features,
                 price: item.price,
                 originalPrice: item.originalPrice,
               );

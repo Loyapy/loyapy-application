@@ -32,7 +32,15 @@ class _HomePageState extends State<HomePage> {
                   if (state.isLoading)
                     const Center(child: CircularProgressIndicator())
                   else
-                    HomeBestDealList(products: state.bestDeals),
+                    HomeListItem(
+                      products: state.bestDeals,
+                      title: 'Best deals for you',
+                    ),
+                  SizedBox(height: 8.w),
+                  HomeListItem(
+                    products: state.bestDeals.reversed.toList(),
+                    title: 'Trending home essentials',
+                  ),
                 ],
               ),
             ),
