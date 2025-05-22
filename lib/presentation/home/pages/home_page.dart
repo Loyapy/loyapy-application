@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../detail/pages/detail_page.dart';
 import '../home.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,9 +36,26 @@ class _HomePageState extends State<HomePage> {
                     HomeListItem(
                       products: state.bestDeals,
                       title: 'Best deals for you',
+                      onDetailTap: (product) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                ProductDetailsPage(product: product),
+                          ),
+                        );
+                      },
                     ),
                   SizedBox(height: 8.w),
                   HomeListItem(
+                    onDetailTap: (product) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ProductDetailsPage(product: product),
+                        ),
+                      );
+                    },
                     products: state.bestDeals.reversed.toList(),
                     title: 'Trending home essentials',
                   ),

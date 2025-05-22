@@ -5,8 +5,13 @@ import '../home.dart';
 class HomeListItem extends StatelessWidget {
   final List<ProductModel> products;
   final String title;
+  final ValueChanged<ProductModel> onDetailTap;
 
-  const HomeListItem({super.key, required this.products, required this.title});
+  const HomeListItem(
+      {super.key,
+      required this.products,
+      required this.title,
+      required this.onDetailTap});
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +32,20 @@ class HomeListItem extends StatelessWidget {
             itemCount: products.length,
             itemBuilder: (context, index) {
               final item = products[index];
-              return ProductItemCard(
-                imageUrl: item.images.first,
-                title: item.title,
-                ratings: item.rating,
-                description: item.description,
-                shortDescription: item.shortDescription,
-                features: item.features,
-                price: item.price,
-                originalPrice: item.originalPrice,
+              return GestureDetector(
+                onTap: () {
+                  onDetailTap.call(products[index]);
+                },
+                child: ProductItemCard(
+                  imageUrl: item.images.first,
+                  title: item.title,
+                  ratings: item.rating,
+                  description: item.description,
+                  shortDescription: item.shortDescription,
+                  features: item.features,
+                  price: item.price,
+                  originalPrice: item.originalPrice,
+                ),
               );
             },
           ),
