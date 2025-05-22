@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "737388060859",
+    "project_id": "loyapy-6078a",
+    "storage_bucket": "loyapy-6078a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737388060859:android:c72cd710a64e8f8e49099e",
+        "android_client_info": {
+          "package_name": "com.loyapy.loyapy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiZF_sFExXXhT-wFACr7QKGDV4RRQEETk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

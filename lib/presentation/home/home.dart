@@ -1,0 +1,16 @@
+export 'bloc/home_state.dart';
+export 'bloc/home_event.dart';
+export 'bloc/home_bloc.dart';
+export 'pages/home_page.dart';
+export 'data/repositories/home_repository_impl.dart';
+export 'domain/repositories/home_repository.dart';
+export 'package:equatable/equatable.dart';
+export 'package:firebase_auth/firebase_auth.dart';
+export 'widgets/home_category_list.dart';
+export 'widgets/home_best_deal_list.dart';
+export 'widgets/home_header.dart';
+export 'widgets/home_banner.dart';
+export 'widgets/best_deal_item_card.dart';
+export 'data/models/product_model.dart';
+export 'data/models/category_model.dart';
+export 'package:flutter_screenutil/flutter_screenutil.dart';
