@@ -118,7 +118,7 @@ class _ProductDetailsView extends StatelessWidget {
                 /// Full Description (below on all screens)
                 Padding(
                   padding: EdgeInsets.only(top: 24),
-                  child: Html(data: product.shortDescription),
+                  child: Html(data: product.description),
                 ),
               ],
             ),
