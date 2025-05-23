@@ -21,6 +21,7 @@ class ProductDetailsPage extends StatelessWidget {
           if (state is! DetailsLoaded) {
             return const Center(child: CircularProgressIndicator());
           }
+          final isMobile = ScreenScale.getDeviceType(context) == MDeviceType.mobile;
 
           final product = state.product;
           final selectedImage = state.selectedImage;
@@ -68,7 +69,7 @@ class ProductDetailsPage extends StatelessWidget {
                   SizedBox(height: 8.w),
                   Html(data: product.description),
                   SizedBox(height: 8.w),
-                  const FooterSection(),
+                   FooterSection(isMobile:isMobile),
                 ],
               ),
             ),

@@ -23,6 +23,7 @@ class HeaderSection extends StatelessWidget {
                         ? Flexible(
                             child: Image.asset(
                               PNGAssets.logoWithoutBg,
+                              height: 30.h,
                             ),
                           )
                         : Flexible(
@@ -50,6 +51,7 @@ class HeaderSection extends StatelessWidget {
               ),
 
               // Location
+              if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               Expanded(
                 child: InkWell(
                   onTap: () {
@@ -79,7 +81,7 @@ class HeaderSection extends StatelessWidget {
               SizedBox(
                 width: 2.w,
               ),
-
+              if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               // Search Box
               Expanded(
                 child: TextField(
@@ -115,6 +117,7 @@ class HeaderSection extends StatelessWidget {
                 width: 1.w,
               ),
               // Icons: Language, Login, Wishlist, Cart
+              if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.language),
@@ -122,6 +125,7 @@ class HeaderSection extends StatelessWidget {
               SizedBox(
                 width: 1.w,
               ),
+              if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               Expanded(
                 child: InkWell(
                   onTap: () {

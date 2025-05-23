@@ -5,7 +5,8 @@ import 'package:loyapy/core/core.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class FooterSection extends StatelessWidget {
-  const FooterSection({super.key});
+  final bool isMobile;
+  const FooterSection({super.key, required this.isMobile});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,121 @@ class FooterSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          isMobile?
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                maxLines: 2,
+                "We're Always Here To Help",
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                textAlign: TextAlign.start,
+              ),
+              Text(
+                maxLines: 2,
+                'Reach out to us through any of these support channels',
+                style: Theme.of(context).textTheme.bodySmall,
+                textAlign: TextAlign.start,
+              ),
+
+              SizedBox(height: 12.h,),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Flexible(
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: AppColors.defaultWhiteColor,
+                            child: Icon(
+                              Icons.phone,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                maxLines: 1,
+                                'Help Center'.toUpperCase(),
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              Text(
+                                maxLines: 5,
+                                AppContents.companyPhone,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 3.w,
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Flexible(
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: AppColors.defaultWhiteColor,
+                            child: Icon(
+                              Icons.email_outlined,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                maxLines: 1,
+                                'Email Support'.toUpperCase(),
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              Text(
+                                maxLines: 5,
+                                AppContents.companyEmail,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ):Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(
@@ -34,8 +149,8 @@ class FooterSection extends StatelessWidget {
                       maxLines: 2,
                       "We're Always Here To Help",
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
+                        fontWeight: FontWeight.bold,
+                      ),
                       textAlign: TextAlign.start,
                     ),
                     Text(
@@ -47,6 +162,7 @@ class FooterSection extends StatelessWidget {
                   ],
                 ),
               ),
+
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,8 +200,8 @@ class FooterSection extends StatelessWidget {
                                       .textTheme
                                       .titleLarge
                                       ?.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ],
                             ),
@@ -129,8 +245,8 @@ class FooterSection extends StatelessWidget {
                                       .textTheme
                                       .titleLarge
                                       ?.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ],
                             ),
@@ -222,7 +338,7 @@ class FooterSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 1.w,
+                        width: 2.w,
                       ),
                       InkWell(
                         onTap: () => mLaunchUrl(
@@ -245,7 +361,7 @@ class FooterSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 1.w,
+                        width: 2.w,
                       ),
                       InkWell(
                         onTap: () => mLaunchUrl(
@@ -268,7 +384,7 @@ class FooterSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 1.w,
+                        width: 2.w,
                       ),
                       InkWell(
                         onTap: () => mLaunchUrl(
@@ -291,7 +407,7 @@ class FooterSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 1.w,
+                        width: 2.w,
                       ),
                       InkWell(
                         onTap: () => mLaunchUrl(

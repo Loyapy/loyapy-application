@@ -1331,6 +1331,10 @@ class HomeRepositoryImpl implements HomeRepository {
     await Future.delayed(
         const Duration(milliseconds: 10)); // simulate API delay
     return [
+      PNGAssets.banner1,
+      PNGAssets.banner2,
+      PNGAssets.banner3,
+      PNGAssets.banner4,
       PNGAssets.banner5,
       PNGAssets.banner5,
       PNGAssets.banner5,

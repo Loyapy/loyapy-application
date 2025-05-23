@@ -13,6 +13,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
+          final isMobile = ScreenScale.getDeviceType(context) == MDeviceType.mobile;
+          final List<String>bannerImages = isMobile
+              ? state.banners.sublist(0, state.banners.length >= 4 ? 4 : state.banners.length)
+              : state.banners.length >= 8
+              ? state.banners.sublist(4, 8)
+              : state.banners.length > 4
+              ? state.banners.sublist(4)
+              : [];
           return SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
@@ -22,7 +30,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const HeaderSection(),
                   SizedBox(height: 12.h),
-                  HomeBanner(bannerImages: state.banners),
+                  HomeBanner( bannerImages: bannerImages),
                   SizedBox(height: 8.w),
                   HomeCategoryList(categories: state.categories),
                   SizedBox(height: 8.w),
@@ -61,7 +69,7 @@ class HomePage extends StatelessWidget {
                     title: 'Trending home essentials',
                   ),
                   SizedBox(height: 8.w),
-                  const FooterSection(),
+                   FooterSection(isMobile: isMobile),
                 ],
               ),
             ),
