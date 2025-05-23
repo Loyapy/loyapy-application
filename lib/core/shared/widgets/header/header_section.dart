@@ -8,7 +8,11 @@ class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.primaryColor,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.r),
+        color: AppColors.primaryColor,
+      ),
+
       child: Column(
         children: [
           // Top row: Logo + Location + Actions
@@ -24,12 +28,14 @@ class HeaderSection extends StatelessWidget {
                             child: Image.asset(
                               PNGAssets.logoWithoutBg,
                               height: 30.h,
+                              color: Colors.black,
                             ),
                           )
                         : Flexible(
                             child: Image.asset(
                               PNGAssets.logoWithoutBg,
                               width: 10.w,
+                              color: Colors.black,
                             ),
                           ),
                     // SizedBox(width: ScreenScale.i.pw(0.01)),

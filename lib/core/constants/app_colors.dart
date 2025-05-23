@@ -4,7 +4,7 @@ import 'package:loyapy/core/core.dart';
 class AppColors {
   static const Color defaultPrimaryColor = Colors.blue;
   static final primaryColor =
-      kHexToColor('#feee00', primaryColor: defaultPrimaryColor);
+      kHexToColor('#34d3eb', primaryColor: defaultPrimaryColor);
   static final scaffoldBGColor =
       kHexToColor('#F8F9FA', primaryColor: defaultPrimaryColor);
   static final secondaryColor =

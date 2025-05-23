@@ -198,7 +198,7 @@ class FooterSection extends StatelessWidget {
                                   AppContents.companyPhone,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleLarge
+                                      .titleMedium
                                       ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -243,7 +243,7 @@ class FooterSection extends StatelessWidget {
                                   AppContents.companyEmail,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleLarge
+                                      .titleMedium
                                       ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),
