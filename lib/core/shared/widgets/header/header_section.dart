@@ -84,32 +84,36 @@ class HeaderSection extends StatelessWidget {
               if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               // Search Box
               Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'What are you looking for?',
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: AppColors.defaultBlackColor,
+                flex: 3,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'What are you looking for?',
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: AppColors.defaultBlackColor,
+                      ),
+                      fillColor: AppColors.defaultWhiteColor,
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide:
+                            BorderSide(color: AppColors.defaultWhiteColor),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide:
+                            BorderSide(color: AppColors.defaultWhiteColor),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide:
+                            BorderSide(color: AppColors.defaultWhiteColor),
+                      ),
+                      hintStyle: Theme.of(context).textTheme.labelMedium,
+                      contentPadding: const EdgeInsets.symmetric(vertical: 8),
                     ),
-                    fillColor: AppColors.defaultWhiteColor,
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide:
-                          BorderSide(color: AppColors.defaultWhiteColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide:
-                          BorderSide(color: AppColors.defaultWhiteColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide:
-                          BorderSide(color: AppColors.defaultWhiteColor),
-                    ),
-                    hintStyle: Theme.of(context).textTheme.labelMedium,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 8),
                   ),
                 ),
               ),

@@ -74,6 +74,13 @@ class ProductDetailsPage extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                   ),
                             ),
+                            SizedBox(height: 4.w,),
+                            Text(
+                              '৳${product.price.toStringAsFixed(0)}',
+                              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             SizedBox(height: 10.h),
                             FeatureSection(features: product.features),
                             SizedBox(height: 10.h),
