@@ -1,0 +1,24 @@
+# This is a generated file; do not edit or check into version control.
+firebase_auth=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/firebase_auth-5.5.4/
+firebase_auth_web=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/firebase_auth_web-5.14.3/
+firebase_core=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/firebase_core-3.13.1/
+firebase_core_web=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/firebase_core_web-2.23.0/
+google_sign_in=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/google_sign_in-6.3.0/
+google_sign_in_android=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/google_sign_in_android-6.2.1/
+google_sign_in_ios=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/google_sign_in_ios-5.9.0/
+google_sign_in_web=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/google_sign_in_web-0.12.4+4/
+path_provider_linux=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+shared_preferences=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/
+shared_preferences_android=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.10/
+shared_preferences_foundation=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4/
+shared_preferences_linux=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+shared_preferences_web=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3/
+shared_preferences_windows=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+url_launcher=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher-6.3.1/
+url_launcher_android=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_android-6.3.16/
+url_launcher_ios=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.3/
+url_launcher_linux=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.1/
+url_launcher_macos=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.2/
+url_launcher_web=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_web-2.4.1/
+url_launcher_windows=/Users/eebrahimjoy/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.4/
