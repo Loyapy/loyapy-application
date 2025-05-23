@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../detail/pages/detail_page.dart';
+import '../../../core/core.dart';
+import '../../detail/detail.dart';
 import '../home.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +20,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const HomeHeader(),
+                  const HeaderSection(),
                   SizedBox(height: 12.h),
                   HomeBanner(bannerImages: state.banners),
                   SizedBox(height: 8.w),
@@ -40,8 +36,10 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) =>
-                                ProductDetailsPage(product: product),
+                            builder: (_) => BlocProvider<DetailsBloc>(
+                              create: (context) => sl<DetailsBloc>(),
+                              child: ProductDetailsPage(product: product),
+                            ),
                           ),
                         );
                       },
@@ -52,13 +50,18 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => ProductDetailsPage(product: product),
+                          builder: (_) => BlocProvider<DetailsBloc>(
+                            create: (context) => sl<DetailsBloc>(),
+                            child: ProductDetailsPage(product: product),
+                          ),
                         ),
                       );
                     },
                     products: state.bestDeals.reversed.toList(),
                     title: 'Trending home essentials',
                   ),
+                  SizedBox(height: 8.w),
+                  const FooterSection(),
                 ],
               ),
             ),

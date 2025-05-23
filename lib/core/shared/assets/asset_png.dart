@@ -18,6 +18,14 @@ class PNGAssets {
   static const String stationary = 'assets/category/stationary.png';
   static const String toys = 'assets/category/toys.png';
   static const String sports = 'assets/category/sports.png';
+  static const String playStore = 'assets/png/google-play.png';
+  static const String appStore = 'assets/png/app-store.png';
 
-
+  //Media
+  static const String facebook = 'assets/social/facebook.png';
+  static const String whatsapp = 'assets/social/whatsapp.png';
+  static const String instagram = 'assets/social/instagram.png';
+  static const String linkedin = 'assets/social/linkedin.png';
+  static const String tiktok = 'assets/social/tiktok.png';
+  static const String x = 'assets/social/x.png';
 }

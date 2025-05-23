@@ -28,4 +28,5 @@ class AppColors {
 
   static final defaultBlackColor = Colors.black;
   static final defaultWhiteColor = Colors.white;
+  static final defaultGreenColor = Colors.green;
 }

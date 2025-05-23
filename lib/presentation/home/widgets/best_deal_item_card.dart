@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:loyapy/core/constants/app_colors.dart';
+
+import '../../../core/core.dart';
 
 class ProductItemCard extends StatelessWidget {
   final String imageUrl;
@@ -10,10 +11,12 @@ class ProductItemCard extends StatelessWidget {
   final dynamic shortDescription;
   final dynamic features;
   final double price;
+  final double itemWidth;
   final double originalPrice;
 
   const ProductItemCard({
     super.key,
+    required this.itemWidth,
     required this.imageUrl,
     required this.description,
     required this.ratings,
@@ -27,7 +30,7 @@ class ProductItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50.w,
+      width: itemWidth,
       margin: EdgeInsets.only(right: 12.h),
       padding: EdgeInsets.only(left: 6.h, top: 6.h, right: 6.h),
       decoration: BoxDecoration(
@@ -58,16 +61,20 @@ class ProductItemCard extends StatelessWidget {
               Positioned(
                 top: 6.h,
                 right: 2.h,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: AppColors.defaultWhiteColor,
-                  ),
-                  child: Padding(
+                child: InkWell(
+                  onTap: (){
+                    openWhatsApp('from Loyapy');
+                  },
+                  child: Container(
                     padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: AppColors.defaultWhiteColor,
+                    ),
                     child: Icon(
                       Icons.favorite_border,
                       color: Colors.blueGrey,
+                      size: 16,
                     ),
                   ),
                 ),
@@ -75,23 +82,41 @@ class ProductItemCard extends StatelessWidget {
               Positioned(
                 bottom: 6.h,
                 right: 2.h,
-                child: Icon(
-                  Icons.add_shopping_cart_outlined,
+                child: InkWell(
+                  onTap: (){
+                    openWhatsApp('from Loyapy');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: AppColors.defaultWhiteColor,
+                    ),
+                    child: Icon(
+                      Icons.add_shopping_cart_outlined,size: 16,
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 bottom: 6.h,
                 left: 2.h,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(Icons.star, color: Colors.orange),
-                    SizedBox(width: 2.h),
-                    Text(
-                      '$ratings',
-                      style: Theme.of(context).textTheme.labelSmall,
-                    ),
-                  ],
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    color: AppColors.defaultWhiteColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(width: 2.h),
+                      Text(
+                        '$ratings',
+                        style: Theme.of(context).textTheme.labelSmall,
+                      ),
+                      Icon(Icons.star, color: AppColors.defaultGreenColor,size: 16,),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -108,25 +133,41 @@ class ProductItemCard extends StatelessWidget {
           SizedBox(height: 4.h),
           Row(
             children: [
-              Text(
-                '৳${price.toStringAsFixed(0)}',
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+              Flexible(
+                child: Text(
+                  maxLines: 1,
+                  '৳${price.toStringAsFixed(0)}',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
               ),
               SizedBox(width: 6.w),
-              Text('৳${originalPrice.toStringAsFixed(0)}',
-                  style: Theme.of(context).textTheme.bodySmall),
+              Flexible(
+                child: Text(
+                  maxLines: 1,
+                  '৳${originalPrice.toStringAsFixed(0)}',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        decoration: TextDecoration.lineThrough,
+                        color: Colors.grey,
+                      ),
+                ),
+              ),
             ],
           ),
           SizedBox(height: 4.h),
           Row(
             children: [
-              Icon(Icons.local_shipping, color: Colors.green),
-              SizedBox(width: 4.w),
-              Text(
-                'Free Delivery',
-                style: Theme.of(context).textTheme.bodySmall,
+              Flexible(
+                child: Icon(Icons.local_shipping, color: Colors.green),
+              ),
+              SizedBox(width: 1.w),
+              Flexible(
+                child: Text(
+                  maxLines: 2,
+                  'Free Delivery',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             ],
           ),

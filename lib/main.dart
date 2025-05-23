@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/core.dart';
 import 'presentation/auth/auth.dart';
+import 'presentation/detail/detail.dart';
 import 'presentation/home/home.dart';
 
 Future<void> main() async {
@@ -45,15 +46,11 @@ class _LoyapyAppState extends State<LoyapyApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (context) => sl<AuthBloc>()),
-          BlocProvider(create: (context) => sl<HomeBloc>()),
-        ],
-        child: Builder(builder: (context) {
-          return HomePage();
-        }),
-      ),
+      home: MultiBlocProvider(providers: [
+        BlocProvider(create: (context) => sl<AuthBloc>()),
+        BlocProvider(create: (context) => sl<HomeBloc>()),
+        BlocProvider(create: (context) => sl<DetailsBloc>()),
+      ], child: HomePage()),
     );
   }
 }

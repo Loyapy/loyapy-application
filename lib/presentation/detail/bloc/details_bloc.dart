@@ -7,12 +7,11 @@ class DetailsBloc extends Bloc<DetailsEvent, DetailsState> {
     on<LoadProductDetails>((event, emit) {
       emit(DetailsLoaded(event.product, event.product.images.first));
     });
-  }
-
-  void changeImage(String imagePath) {
-    if (state is DetailsLoaded) {
-      final loaded = state as DetailsLoaded;
-      emit(DetailsLoaded(loaded.product, imagePath));
-    }
+    on<ChangeProductImage>((event, emit) {
+      if (state is DetailsLoaded) {
+        final loaded = state as DetailsLoaded;
+        emit(DetailsLoaded(loaded.product, event.newImage));
+      }
+    });
   }
 }

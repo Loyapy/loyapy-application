@@ -8,7 +8,6 @@ export 'package:equatable/equatable.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'widgets/home_category_list.dart';
 export 'widgets/home_best_deal_list.dart';
-export 'widgets/home_header.dart';
 export 'widgets/home_banner.dart';
 export 'widgets/best_deal_item_card.dart';
 export 'data/models/product_model.dart';
