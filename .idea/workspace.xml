@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51f19024-3395-46bd-a965-76ee2b97834d" name="Changes" comment="latest">
-      <change beforePath="$PROJECT_DIR$/lib/core/shared/widgets/footer/footer_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/shared/widgets/footer/footer_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/shared/widgets/header/header_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/shared/widgets/header/header_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/detail/pages/detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/detail/pages/detail_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/data/repositories/home_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/data/repositories/home_repository_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/widgets/home_banner.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/widgets/home_banner.dart" afterDir="false" />
-    </list>
+    <list default="true" id="51f19024-3395-46bd-a965-76ee2b97834d" name="Changes" comment="mobile view updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +50,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "gh-pages",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/mesoft/Desktop/Development/eebrahimjoy/loyapy/assets/social",
@@ -143,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747994941408</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mobile view updated">
+      <option name="closed" value="true" />
+      <created>1748002225435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748002225435</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +152,7 @@
     <MESSAGE value="- home page design (upto bes essentials)" />
     <MESSAGE value="details" />
     <MESSAGE value="latest" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest" />
+    <MESSAGE value="mobile view updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobile view updated" />
   </component>
 </project>
