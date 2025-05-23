@@ -1,0 +1,4 @@
+#Fri May 23 14:36:29 GST 2025
+base.0=/Users/mesoft/Desktop/Development/eebrahimjoy/loyapy/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
