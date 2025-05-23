@@ -21,7 +21,8 @@ class ProductDetailsPage extends StatelessWidget {
           if (state is! DetailsLoaded) {
             return const Center(child: CircularProgressIndicator());
           }
-          final isMobile = ScreenScale.getDeviceType(context) == MDeviceType.mobile;
+          final isMobile =
+              ScreenScale.getDeviceType(context) == MDeviceType.mobile;
 
           final product = state.product;
           final selectedImage = state.selectedImage;
@@ -32,7 +33,24 @@ class ProductDetailsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const HeaderSection(),
+                  isMobile
+                      ? Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(Icons.arrow_back_outlined),
+                            ),
+                            Text('Product details',style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),),
+                          ],
+                        )
+                      : const HeaderSection(),
                   SizedBox(height: 12.h),
                   Row(
                     children: [
@@ -42,6 +60,7 @@ class ProductDetailsPage extends StatelessWidget {
                           selectedImage: selectedImage,
                         ),
                       ),
+                      SizedBox(width: 5.w,),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +88,7 @@ class ProductDetailsPage extends StatelessWidget {
                   SizedBox(height: 8.w),
                   Html(data: product.description),
                   SizedBox(height: 8.w),
-                   FooterSection(isMobile:isMobile),
+                  FooterSection(isMobile: isMobile),
                 ],
               ),
             ),
