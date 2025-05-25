@@ -14,13 +14,6 @@ class HomePage extends StatelessWidget {
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           final isMobile = ScreenScale.getDeviceType(context) == MDeviceType.mobile;
-          final List<String>bannerImages = isMobile
-              ? state.banners.sublist(0, state.banners.length >= 4 ? 4 : state.banners.length)
-              : state.banners.length >= 8
-              ? state.banners.sublist(4, 8)
-              : state.banners.length > 4
-              ? state.banners.sublist(4)
-              : [];
           return SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
@@ -30,7 +23,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const HeaderSection(),
                   SizedBox(height: 12.h),
-                  HomeBanner( bannerImages: bannerImages),
+                  HomeBanner( bannerImages: state.banners, isMobile:isMobile),
                   SizedBox(height: 8.w),
                   HomeCategoryList(categories: state.categories),
                   SizedBox(height: 8.w),

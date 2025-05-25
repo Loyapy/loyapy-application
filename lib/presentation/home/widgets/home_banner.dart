@@ -4,8 +4,9 @@ import 'package:loyapy/presentation/home/home.dart';
 
 class HomeBanner extends StatelessWidget {
   final List<String> bannerImages;
+  final bool isMobile;
 
-  const HomeBanner({super.key, required this.bannerImages});
+  const HomeBanner({super.key, required this.bannerImages, required this.isMobile});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +14,10 @@ class HomeBanner extends StatelessWidget {
 
     return CarouselSlider(
       options: CarouselOptions(
-        height: 260.h,
+        height: isMobile ? 95.h : 300.h,
         autoPlay: true,
         enlargeCenterPage: true,
-        viewportFraction: 0.9,
-        aspectRatio: 16 / 9,
+        viewportFraction: 1,
       ),
       items: bannerImages.map((imagePath) {
         return ClipRRect(

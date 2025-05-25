@@ -1335,10 +1335,6 @@ class HomeRepositoryImpl implements HomeRepository {
       PNGAssets.banner2,
       PNGAssets.banner3,
       PNGAssets.banner4,
-      PNGAssets.banner5,
-      PNGAssets.banner5,
-      PNGAssets.banner5,
-      PNGAssets.banner5,
     ];
   }
 

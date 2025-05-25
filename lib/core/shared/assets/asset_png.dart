@@ -9,7 +9,6 @@ class PNGAssets {
   static const String banner2 = 'assets/png/banner_2.png';
   static const String banner3 = 'assets/png/banner_3.png';
   static const String banner4 = 'assets/png/banner_4.png';
-  static const String banner5 = 'assets/png/banner_5.png';
 
   static const String baby = 'assets/category/baby.png';
   static const String electronics = 'assets/category/electronics.png';
