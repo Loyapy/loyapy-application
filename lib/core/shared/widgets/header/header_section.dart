@@ -58,36 +58,6 @@ class HeaderSection extends StatelessWidget {
 
               // Location
               if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
-              Expanded(
-                child: InkWell(
-                  onTap: () {
-                    openWhatsApp('from Loyapy');
-                  },
-                  child: Row(
-                    children: [
-                      Flexible(
-                        child: Icon(Icons.location_on,
-                            size: 20, color: AppColors.defaultBlackColor),
-                      ),
-                      SizedBox(width: 4.w),
-                      Flexible(
-                        child: Text(
-                          maxLines: 1,
-                          'Mirpur, Dhaka, Bangladesh',
-                          style:
-                              Theme.of(context).textTheme.labelMedium?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 2.w,
-              ),
-              if(ScreenScale.getDeviceType(context)!=MDeviceType.mobile)
               // Search Box
               Expanded(
                 flex: 3,

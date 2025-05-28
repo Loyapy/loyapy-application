@@ -383,7 +383,7 @@ class FooterSection extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                /*      SizedBox(
                         width: 2.w,
                       ),
                       InkWell(
@@ -428,7 +428,7 @@ class FooterSection extends StatelessWidget {
                             color: Colors.black,
                           ),
                         ),
-                      ),
+                      ),*/
                     ],
                   ),
                 ],

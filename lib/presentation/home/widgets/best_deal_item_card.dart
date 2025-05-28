@@ -159,13 +159,13 @@ class ProductItemCard extends StatelessWidget {
           Row(
             children: [
               Flexible(
-                child: Icon(Icons.local_shipping, color: Colors.green),
+                child: Icon(Icons.check_box_outlined, color: Colors.green,),
               ),
               SizedBox(width: 1.w),
               Flexible(
                 child: Text(
                   maxLines: 2,
-                  'Free Delivery',
+                  'Save 25%',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
